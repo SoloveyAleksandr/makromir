@@ -477,6 +477,11 @@
 
         @include breakpoint($sm-bp) {
           padding: 0;
+
+          &:not(:last-child) {
+            padding-bottom: 1rem;
+            border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+          }
         }
 
         &:nth-child(3n + 1) {
@@ -494,11 +499,6 @@
           @include breakpoint($sm-bp) {
             border: none;
           }
-        }
-
-        &:not(:last-child) {
-          padding-bottom: 1rem;
-          border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
         }
 
         &__number {

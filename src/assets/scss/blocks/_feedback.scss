@@ -1,0 +1,70 @@
+.feedback {
+  min-height: 96rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/feedback-bg.jpg) center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+
+  @include breakpoint($xl-bp) {
+    min-height: 76rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    min-height: unset;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 101.2rem;
+    padding: 10rem;
+    background-color: $white-1;
+
+    @include breakpoint($sm-bp) {
+      align-items: flex-start;
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
+  &__title {
+    @include breakpoint($sm-bp) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    width: 63rem;
+    gap: 3rem;
+
+    @include breakpoint($sm-bp) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
