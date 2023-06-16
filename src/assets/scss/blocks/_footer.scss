@@ -1,0 +1,35 @@
+.footer {
+  margin-top: auto;
+  padding: 1.1rem 0rem 1.5rem;
+  background-color: $black;
+
+  @include breakpoint($sm-bp) {
+    padding: 1.7rem 0rem 1.6rem;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 6.7rem;
+
+    @include breakpoint($sm-bp) {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: $white-1;
+
+    &:is(a) {
+      text-decoration: underline;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

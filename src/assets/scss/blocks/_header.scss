@@ -1,0 +1,83 @@
+.header {
+  background-color: $white-2;
+  padding: 2rem 0;
+
+  @include breakpoint($sm-bp) {
+    padding: 0;
+    background-color: $white-1;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      gap: 0rem;
+    }
+  }
+
+  &__logo {
+    flex: 1;
+    height: 3.7rem;
+    max-width: 16.5rem;
+
+    @include breakpoint($sm-bp) {
+      margin: 1.5rem 0rem 1.4rem;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: left center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-nav {
+    margin: 0;
+
+    @include breakpoint($sm-bp) {
+      width: calc(100% + 3rem);
+      padding: 1.6rem 1.5rem 1.7rem 1.5rem;
+      margin: 0rem -1.5rem;
+      background-color: $grey;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+
+    &__link {
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      text-align: center;
+      text-transform: uppercase;
+      width: fit-content;
+      transition: 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:not(:last-child) {
+        padding-right: 2rem;
+      }
+
+      &.header-nav__link_orange {
+        color: $orange;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

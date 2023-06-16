@@ -9,29 +9,21 @@ html {
   box-sizing: border-box;
   font-size: calc(100vw / 1920 * 10);
 
-  @include breakpoint($cos-bp) {
-    font-size: calc(100vw / 1330 * 10);
-  }
-
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1024 * 10);
   }
 
-  @include breakpoint($jb-bp) {
-    font-size: calc(100vw / 850 * 10);
-  }
-
-  @include breakpoint($lb-bp) {
-    font-size: calc(100vw / 650 * 10);
-  }
-
   @include breakpoint($sm-bp) {
-    font-size: calc(100vw / 500 * 10);
-  }
-
-  @include breakpoint($xs-bp) {
     font-size: calc(100vw / 375 * 10);
   }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  color: $black;
 }
 
 *,
@@ -46,5 +38,14 @@ img {
 }
 
 svg {
-  transition: all 0.1s linear;
+  transition: 0.3s;
 }
+
+a {
+  color: inherit;
+}
+
+@import "./blocks/header";
+@import "./blocks/footer";
+
+@import "./blocks/apartments";
