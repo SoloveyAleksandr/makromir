@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  const startWidth = window.outerWidth;
+
+  window.onresize = () => {
+    if (startWidth > 1024) {
+      if (window.outerWidth <= 1024) {
+        location.reload();
+      }
+    } else {
+      if (window.outerWidth > 1024) {
+        location.reload();
+      }
+    }
+  }
+
   class QuestionsDropdown {
     constructor(container) {
       this.container = container;
@@ -126,6 +140,38 @@ document.addEventListener("DOMContentLoaded", () => {
           slidesPerView: 3,
           spaceBetween: 0,
         }
+      },
+    });
+  }
+
+  const investmentProjectsSwiper = document.querySelector(".investment-projects__swiper");
+  if (investmentProjectsSwiper && window.matchMedia("(max-width: 1024px)").matches) {
+    new Swiper(investmentProjectsSwiper, {
+      // freeMode: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      pagination: {
+        el: ".investment-projects__bullets",
+        type: "bullets",
+        bulletClass: "swiper-bullet",
+        bulletActiveClass: "swiper-bullet_active",
+        modifierClass: "",
+      },
+    });
+  }
+
+  const investmentReasonSwiper = document.querySelector(".investment-reason__swiper");
+  if (investmentReasonSwiper && window.matchMedia("(max-width: 1024px)").matches) {
+    new Swiper(investmentReasonSwiper, {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      autoHeight: true,
+      pagination: {
+        el: ".investment-reason__bullets",
+        type: "bullets",
+        bulletClass: "swiper-bullet",
+        bulletActiveClass: "swiper-bullet_active",
+        modifierClass: "",
       },
     });
   }
