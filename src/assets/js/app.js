@@ -176,4 +176,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const casePhotoSwiper = document.querySelector(".case-photo__swiper");
+  if (casePhotoSwiper) {
+    new Swiper(casePhotoSwiper, {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      pagination: {
+        el: ".case-photo__bullets",
+        type: "bullets",
+        bulletClass: "swiper-bullet",
+        bulletActiveClass: "swiper-bullet_active",
+        modifierClass: "",
+      },
+      breakpoints: {
+        1025: {
+          slidesPerView: 2,
+        }
+      }
+    });
+  }
+
+  const caseAvailableSwiper = document.querySelector(".case-available__swiper");
+  if (caseAvailableSwiper && window.matchMedia("(max-width: 1024px)").matches) {
+    new Swiper(caseAvailableSwiper, {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      autoHeight: true,
+      pagination: {
+        el: ".case-available__bullets",
+        type: "bullets",
+        bulletClass: "swiper-bullet",
+        bulletActiveClass: "swiper-bullet_active",
+        modifierClass: "",
+      },
+    });
+  }
+
 });
