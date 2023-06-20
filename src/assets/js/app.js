@@ -212,4 +212,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const caseAboutSwiper = document.querySelector(".case-about__swiper");
+  if (caseAboutSwiper) {
+    new Swiper(caseAboutSwiper, {
+      spaceBetween: 40,
+      autoHeight: true,
+      pagination: {
+        el: ".case-about__bullets",
+        type: "bullets",
+        bulletClass: "swiper-bullet",
+        bulletActiveClass: "swiper-bullet_active",
+        modifierClass: "",
+      },
+    });
+  }
+
 });
