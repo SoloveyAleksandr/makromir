@@ -31,8 +31,23 @@
     }
 
     &__text {
+      font-size: 1.8rem;
+      @include text;
       max-width: 76.5rem;
       margin-bottom: 6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      @include breakpoint($sm-bp) {
+        font-size: 1.4rem;
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 1.5em;
+        @include text;
+      }
 
       @include breakpoint($sm-bp) {
         margin-bottom: 4.5rem;
@@ -52,13 +67,11 @@
     display: flex;
     flex-direction: column;
     font-size: 1.8rem;
-    line-height: 2.5rem;
     @include text;
     margin-bottom: 15rem;
 
     @include breakpoint($sm-bp) {
       font-size: 1.4rem;
-      line-height: 1.9rem;
       margin-bottom: 6.5rem;
     }
 
@@ -67,12 +80,10 @@
     h3 {
       font-weight: 700;
       font-size: 3rem;
-      line-height: 4.1rem;
       margin-bottom: 4rem;
 
       @include breakpoint($sm-bp) {
         font-size: 2.4rem;
-        line-height: 3.3rem;
         margin-bottom: 3rem;
       }
     }
@@ -85,21 +96,37 @@
       display: flex;
       flex-direction: column;
       font-size: 1.8rem;
-      line-height: 2.5rem;
       font-weight: 600;
       @include text;
+      list-style: disc;
+      padding-left: 1em;
 
-      li {
-        &::before {
-          content: "-";
-          color: $orange;
-          padding-right: 0.5em;
-        }
+      @include breakpoint($sm-bp) {
+        font-size: 1.4rem;
       }
+
+      // li {
+      //   &::before {
+      //     content: "-";
+      //     color: $orange;
+      //     padding-right: 0.5em;
+      //   }
+      // }
     }
 
     p {
       display: inline-block;
+    }
+  }
+
+  &-map {
+    width: 100%;
+    height: 60rem;
+    margin-bottom: 15rem;
+
+    @include breakpoint($sm-bp) {
+      margin-bottom: 6.5rem;
+      height: 40rem;
     }
   }
 
@@ -130,11 +157,9 @@
 
     &__text {
       font-size: 1.8rem;
-      line-height: 2.5rem;
 
       @include breakpoint($sm-bp) {
         font-size: 1.4rem;
-        line-height: 1.9rem;
       }
     }
 
@@ -191,11 +216,9 @@
 
     &__text {
       font-size: 1.8rem;
-      line-height: 2.5rem;
 
       @include breakpoint($sm-bp) {
         font-size: 1.4rem;
-        line-height: 1.9rem;
       }
     }
 
@@ -219,7 +242,6 @@
       &__number {
         flex: none;
         font-size: 4rem;
-        line-height: 2.1rem;
         color: $orange;
         display: flex;
         align-items: center;
@@ -252,12 +274,10 @@
 
       &__text {
         font-size: 2rem;
-        line-height: 2.3rem;
         font-weight: 600;
 
         @include breakpoint($sm-bp) {
           font-size: 1.8rem;
-          line-height: 2.5rem;
         }
       }
     }
@@ -280,17 +300,16 @@
 
     &__text {
       font-size: 1.8rem;
-      line-height: 2.5rem;
       margin-bottom: 4rem;
 
       @include breakpoint($sm-bp) {
         font-size: 1.4rem;
-        line-height: 1.9rem;
         margin-bottom: 3rem;
       }
     }
 
     &__list {
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3rem;
@@ -308,10 +327,17 @@
     }
 
     &-item {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+      padding-top: 39rem;
+      position: relative;
+
+      @include breakpoint($xl-bp) {
+        padding-top: 36rem;
+      }
 
       &.case-progress-item_current {
         .case-progress-item__text {
@@ -319,13 +345,20 @@
         }
       }
 
+      &__swiper {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      }
+
       &__img {
         width: 100%;
         height: 37rem;
-        clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 
         @include breakpoint($xl-bp) {
-          height: 35rem;
+          height: 34rem;
         }
 
         img {
@@ -339,7 +372,6 @@
       &__text {
         font-weight: 600;
         font-size: 1.8rem;
-        line-height: 2.5rem;
       }
     }
   }
@@ -361,13 +393,11 @@
 
     &__text {
       font-size: 1.8rem;
-      line-height: 2.5rem;
       margin-bottom: 6rem;
 
       @include breakpoint($sm-bp) {
         margin-bottom: 3rem;
         font-size: 1.4rem;
-        line-height: 1.9rem;
       }
     }
 
@@ -403,7 +433,6 @@
 
       &__title {
         font-size: 1.8rem;
-        line-height: 2.5rem;
         font-weight: 700;
         color: $orange;
         margin-bottom: 4rem;
@@ -434,7 +463,6 @@
       &__text {
         margin-top: auto;
         font-size: 1.8rem;
-        line-height: 2.5rem;
         display: flex;
         flex-direction: column;
         @include text;
@@ -459,12 +487,10 @@
 
     &__text {
       font-size: 1.8rem;
-      line-height: 2.5rem;
       margin-bottom: 6rem;
 
       @include breakpoint($sm-bp) {
         font-size: 1.4rem;
-        line-height: 1.9rem;
         margin-bottom: 2rem;
       }
     }
@@ -490,14 +516,12 @@
 
     &__item {
       font-size: 2rem;
-      line-height: 2.7rem;
       font-weight: 600;
-      color: $orange;
+      // color: $orange;
       margin-left: 1.2em;
 
       @include breakpoint($sm-bp) {
         font-size: 1.6rem;
-        line-height: 2.2rem;
       }
     }
   }
@@ -534,7 +558,6 @@
 
     &__text {
       font-size: 1.8rem;
-      line-height: 2.5rem;
       @include text;
       max-width: 85rem;
       margin-bottom: 6rem;
@@ -542,7 +565,6 @@
       @include breakpoint($sm-bp) {
         margin-bottom: 4rem;
         font-size: 1.4rem;
-        line-height: 1.9rem;
       }
     }
 
@@ -610,12 +632,10 @@
 
     &__text {
       font-size: 1.8rem;
-      line-height: 2.5rem;
       max-width: 32rem;
 
       @include breakpoint($sm-bp) {
         font-size: 1.4rem;
-        line-height: 1.9rem;
       }
     }
 
@@ -640,7 +660,6 @@
 
       &__number {
         font-size: 4rem;
-        line-height: 2.2rem;
         color: $orange;
         flex: none;
         display: flex;
@@ -675,15 +694,17 @@
       &__title {
         font-weight: 600;
         font-size: 2rem;
-        line-height: 2.7rem;
         text-transform: uppercase;
         color: $orange;
       }
 
       &__text {
-        font-weight: 600;
-        font-size: 1.4rem;
-        line-height: 1.9rem;
+        // font-weight: 600;
+        font-size: 1.6rem;
+
+        @include breakpoint($sm-bp) {
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -706,13 +727,16 @@
     &__text {
       margin-bottom: 6rem;
       font-size: 1.8rem;
-      line-height: 2.5rem;
 
       @include breakpoint($sm-bp) {
         margin-bottom: 4rem;
         font-size: 1.4rem;
-        line-height: 1.9rem;
       }
+    }
+
+    &__bullets {
+      width: fit-content;
+      margin: 2rem 0rem 0rem auto;
     }
 
     &__list {
@@ -721,12 +745,8 @@
       gap: 4rem;
 
       @include breakpoint($xl-bp) {
-        gap: 3rem;
-      }
-
-      @include breakpoint($sm-bp) {
+        gap: 0;
         display: flex;
-        flex-direction: column;
       }
     }
 
@@ -765,7 +785,6 @@
         text-align: center;
         font-weight: 600;
         font-size: 1.6rem;
-        line-height: 2.2rem;
       }
     }
   }

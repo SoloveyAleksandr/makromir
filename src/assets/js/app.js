@@ -160,21 +160,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const investmentReasonSwiper = document.querySelector(".investment-reason__swiper");
-  if (investmentReasonSwiper && window.matchMedia("(max-width: 1024px)").matches) {
-    new Swiper(investmentReasonSwiper, {
-      slidesPerView: "auto",
-      spaceBetween: 30,
-      autoHeight: true,
-      pagination: {
-        el: ".investment-reason__bullets",
-        type: "bullets",
-        bulletClass: "swiper-bullet",
-        bulletActiveClass: "swiper-bullet_active",
-        modifierClass: "",
-      },
-    });
-  }
+  // const investmentReasonSwiper = document.querySelector(".investment-reason__swiper");
+  // if (investmentReasonSwiper && window.matchMedia("(max-width: 1024px)").matches) {
+  //   new Swiper(investmentReasonSwiper, {
+  //     slidesPerView: "auto",
+  //     spaceBetween: 30,
+  //     autoHeight: true,
+  //     pagination: {
+  //       el: ".investment-reason__bullets",
+  //       type: "bullets",
+  //       bulletClass: "swiper-bullet",
+  //       bulletActiveClass: "swiper-bullet_active",
+  //       modifierClass: "",
+  //     },
+  //   });
+  // }
 
   const casePhotoSwiper = document.querySelector(".case-photo__swiper");
   if (casePhotoSwiper) {
@@ -224,6 +224,54 @@ document.addEventListener("DOMContentLoaded", () => {
         bulletActiveClass: "swiper-bullet_active",
         modifierClass: "",
       },
+    });
+  }
+
+  const caseProgress = document.querySelector(".case-progress");
+  if (caseProgress) {
+    const items = caseProgress.querySelectorAll(".case-progress-item");
+    items.forEach(item => {
+      const swiper = item.querySelector(".case-progress-item__swiper");
+      const bullets = item.querySelector(".case-progress-item__bullets");
+      new Swiper(swiper, {
+        pagination: {
+          el: bullets,
+          type: "bullets",
+          bulletClass: "swiper-bullet",
+          bulletActiveClass: "swiper-bullet_active",
+          modifierClass: "",
+          clickable: true,
+        },
+      })
+    })
+  }
+
+  const objectsFilterSwiper = document.querySelector(".objects-filter__swiper");
+  if (objectsFilterSwiper) {
+    new Swiper(objectsFilterSwiper, {
+      freeMode: true,
+      slidesPerView: "auto",
+      spaceBetween: 15,
+    })
+  }
+
+  const caseRegionSwiper = document.querySelector(".case-region__swiper");
+  if (caseRegionSwiper && window.matchMedia("(max-width: 1024px)").matches) {
+    new Swiper(caseRegionSwiper, {
+      pagination: {
+        el: ".case-region__bullets",
+        type: "bullets",
+        bulletClass: "swiper-bullet",
+        bulletActiveClass: "swiper-bullet_active",
+        modifierClass: "",
+        clickable: true,
+      },
+      slidesPerView: 1,
+      breakpoints: {
+        501: {
+          slidesPerView: 4,
+        }
+      }
     });
   }
 

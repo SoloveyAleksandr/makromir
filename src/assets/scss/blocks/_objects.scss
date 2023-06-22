@@ -1,4 +1,56 @@
 .objects {
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 5rem;
+    font-weight: 400;
+    font-size: 2rem;
+    max-width: 60rem;
+  }
+
+  &-filter {
+    margin-bottom: 5rem;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: $black;
+      }
+    }
+
+    &__swiper {
+      width: calc(100% + 3rem);
+      margin: 0rem -1.5rem;
+      padding: 0rem 1.5rem;
+    }
+
+    &__btn {
+      padding: 0.9rem 2.5rem;
+      color: $black;
+      border: 0.2rem solid $orange;
+      background-color: transparent;
+      font-size: 1.6rem;
+      font-weight: 600;
+      width: fit-content;
+      transition: 0.3s;
+
+      &._active {
+        background-color: $orange;
+        color: $white-1;
+      }
+    }
+  }
+
   &-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -62,7 +114,6 @@
       right: 0;
       bottom: 0;
       font-size: 1.2rem;
-      line-height: 1.6rem;
       padding: 0.7rem 1rem;
       color: $white-1;
       background-color: $orange;
@@ -85,7 +136,6 @@
     &__title {
       font-weight: 700;
       font-size: 1.4rem;
-      line-height: 1.9rem;
       text-transform: uppercase;
       margin-bottom: 2rem;
 
@@ -117,13 +167,11 @@
     &__info-title {
       font-weight: 600;
       font-size: 1.4rem;
-      line-height: 1.9rem;
     }
 
     &__info-text {
       font-weight: 400;
       font-size: 1.4rem;
-      line-height: 1.9rem;
     }
 
     &__link {
