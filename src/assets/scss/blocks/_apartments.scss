@@ -13,8 +13,8 @@
     }
 
     @include breakpoint($sm-bp) {
-      min-height: 71.3rem;
-      padding: 2rem 0;
+      min-height: unset;
+      padding: 0;
     }
 
     &__bg {
@@ -48,6 +48,10 @@
       width: 100%;
       position: relative;
       z-index: 2;
+
+      @include breakpoint($sm-bp) {
+        padding: 0;
+      }
     }
 
     &__inner {
@@ -62,7 +66,7 @@
       }
 
       @include breakpoint($sm-bp) {
-        padding: 1.5rem;
+        padding: 4rem 1.5rem;
       }
     }
 

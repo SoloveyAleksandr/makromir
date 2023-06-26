@@ -63,59 +63,44 @@
     }
   }
 
-  &-text {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.8rem;
-    @include text;
+  &-location {
     margin-bottom: 15rem;
 
     @include breakpoint($sm-bp) {
-      font-size: 1.4rem;
       margin-bottom: 6.5rem;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-weight: 700;
-      font-size: 3rem;
-      margin-bottom: 4rem;
-
-      @include breakpoint($sm-bp) {
-        font-size: 2.4rem;
-        margin-bottom: 3rem;
-      }
-    }
-
-    strong {
-      font-weight: 600;
-    }
-
-    ul {
+    &__text {
+      font-size: 1.8rem;
+      @include text;
       display: flex;
       flex-direction: column;
-      font-size: 1.8rem;
-      font-weight: 600;
-      @include text;
-      list-style: disc;
-      padding-left: 1em;
+
+      strong {
+        font-weight: 600;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+        font-weight: 600;
+        @include text;
+        list-style: disc;
+        padding-left: 1em;
+
+        @include breakpoint($sm-bp) {
+          font-size: 1.4rem;
+        }
+      }
+
+      p {
+        display: inline-block;
+      }
 
       @include breakpoint($sm-bp) {
         font-size: 1.4rem;
       }
-
-      // li {
-      //   &::before {
-      //     content: "-";
-      //     color: $orange;
-      //     padding-right: 0.5em;
-      //   }
-      // }
-    }
-
-    p {
-      display: inline-block;
     }
   }
 
