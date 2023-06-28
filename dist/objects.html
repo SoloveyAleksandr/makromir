@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="">
+    <title>DEFAULT</title>
+    
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="assets/css/style.min.css"></head>
+
+<body>
+    <svg style="display: none;">
+    
+        <symbol id="arrow-icon" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L9.5 10L18 1" />
+        </symbol>
+    
+        <symbol id="time-money-icon" viewBox="0 0 85 86" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M49.6789 15.0308C48.9751 15.0308 48.4039 15.6011 48.4039 16.3058C48.4039 17.0104 48.9751 17.5808 49.6789 17.5808C63.6963 17.5808 75.0998 28.9835 75.0998 43C75.0998 57.0156 63.6963 68.4184 49.6789 68.4184C39.1363 68.4184 29.7626 61.875 26.0014 52.2242L27.6962 52.9781C28.3406 53.2654 29.0936 52.9739 29.3792 52.3304C29.6649 51.687 29.3759 50.933 28.7323 50.6474L24.3736 48.7102C23.7454 48.4323 23.0111 48.6993 22.7093 49.3163L20.7772 53.2731C20.4687 53.9055 20.7314 54.6696 21.3637 54.9782C21.5439 55.0665 21.7344 55.1074 21.9222 55.1074C22.3939 55.1074 22.8479 54.8439 23.0689 54.3917L23.6401 53.2213C27.7957 63.8046 38.1028 70.9684 49.6781 70.9684C65.1022 70.9684 77.6491 58.4215 77.6491 43C77.6491 27.5784 65.1031 15.0308 49.6789 15.0308Z" />
+            <path
+                d="M39.655 36.7135V20.4801C39.655 19.7754 39.0846 19.2051 38.38 19.2051H8.62314C7.91849 19.2051 7.34814 19.7754 7.34814 20.4801V36.7135C7.34814 37.4181 7.91849 37.9885 8.62314 37.9885H38.38C39.0838 37.9885 39.655 37.4181 39.655 36.7135ZM37.105 35.4385H9.89815V21.7551H37.105V35.4385Z" />
+            <path
+                d="M23.5025 33.1663C26.0227 33.1663 28.0738 31.1153 28.0738 28.595C28.0738 26.0748 26.0227 24.0237 23.5025 24.0237C20.9822 24.0237 18.9312 26.0748 18.9312 28.595C18.9312 31.1153 20.9822 33.1663 23.5025 33.1663ZM23.5025 26.5737C24.6169 26.5737 25.5238 27.4806 25.5238 28.595C25.5238 29.7094 24.6169 30.6163 23.5025 30.6163C22.3882 30.6163 21.4812 29.7094 21.4812 28.595C21.4812 27.4806 22.3882 26.5737 23.5025 26.5737Z" />
+            <path
+                d="M35.9782 56.7598C36.2273 57.0089 36.5536 57.1329 36.88 57.1329C37.2065 57.1329 37.5328 57.0089 37.7819 56.7598L50.3245 44.2087C50.5633 43.9699 50.6976 43.6451 50.6976 43.3069V25.1722C50.6976 24.4674 50.1265 23.8972 49.4226 23.8972C48.7188 23.8972 48.1476 24.4674 48.1476 25.1722V42.779L35.9773 54.9562C35.4801 55.4542 35.4801 56.2626 35.9782 56.7598Z" />
+        </symbol>
+    
+        <symbol id="coins-icon" viewBox="0 0 85 86" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M78.269 59.3808C78.1072 54.7824 76.6749 49.2413 74.2355 43.7789C68.874 31.7691 60.8655 24.4789 55.6106 26.8285L52.5563 28.1914V20.946C52.5563 15.1906 42.6387 10.8496 29.4871 10.8496C16.3356 10.8496 6.41797 15.1906 6.41797 20.946V33.9188C6.41797 33.9874 6.42728 34.0535 6.43829 34.1196C6.42813 34.1856 6.41797 34.2517 6.41797 34.3203C6.41797 34.4372 6.42898 34.5532 6.4366 34.6685C6.42728 34.7294 6.41797 34.7913 6.41797 34.8548V47.8275C6.41797 47.8961 6.42728 47.9623 6.43829 48.0283C6.42813 48.0944 6.41797 48.1604 6.41797 48.2291C6.41797 48.3755 6.42898 48.5204 6.44168 48.6644C6.42728 48.7398 6.41797 48.8177 6.41797 48.8974V61.8685C6.41797 61.9371 6.42728 62.0031 6.43829 62.0692C6.42813 62.1353 6.41797 62.2013 6.41797 62.2699C6.41797 68.0262 16.3356 72.3671 29.4871 72.3671C37.8226 72.3671 45.422 70.469 49.4376 67.4647C53.0213 72.1105 56.8768 74.8472 60.1049 74.8472C60.8426 74.8472 61.5481 74.7049 62.2088 74.4093L74.4202 68.9571C77.0781 67.7747 78.4452 64.3723 78.269 59.3808ZM29.4871 13.3915C41.585 13.3915 50.0153 17.3733 50.0153 20.9468C50.0153 24.5212 41.5842 28.5039 29.4871 28.5039C17.3901 28.5039 8.959 24.5212 8.959 20.9468C8.959 17.3733 17.3893 13.3915 29.4871 13.3915ZM8.959 33.9197V25.6986C12.7172 28.9308 20.3132 31.0449 29.4871 31.0449C38.6619 31.0449 46.2579 28.9308 50.0153 25.6986V29.3264L43.3951 32.2807C40.8498 33.4191 39.5606 36.5505 39.5132 40.8398C36.4487 41.508 33.0192 41.8773 29.4863 41.8773C17.3885 41.8773 8.95815 37.8955 8.95815 34.322C8.95815 34.2534 8.94883 34.1873 8.93782 34.1212C8.94883 34.0543 8.959 33.9883 8.959 33.9197ZM8.959 47.8293V39.0728C12.7172 42.3042 20.3132 44.4184 29.4871 44.4184C33.0276 44.4184 36.4979 44.0788 39.625 43.4332C39.913 46.5757 40.7558 50.1628 42.1533 53.9515C38.3994 55.1652 34.1491 55.7861 29.4871 55.7861C17.3893 55.7861 8.959 51.8043 8.959 48.2308C8.959 48.1622 8.94968 48.0961 8.93867 48.03C8.94883 47.9639 8.959 47.8979 8.959 47.8293ZM29.4871 69.8287C17.3893 69.8287 8.959 65.846 8.959 62.2725C8.959 62.2039 8.94968 62.1378 8.93867 62.0718C8.94883 62.0056 8.959 61.9396 8.959 61.871V52.9817C12.7172 56.2129 20.3132 58.3271 29.4871 58.3271C34.4777 58.3271 39.0414 57.6461 43.0867 56.3172C43.2469 56.6983 43.4128 57.0803 43.5839 57.4631C44.9078 60.4285 46.396 63.0924 47.9612 65.4081C44.4581 68.0771 37.2441 69.8287 29.4871 69.8287ZM61.1737 72.0919C57.9094 73.5487 50.8369 67.474 45.9047 56.4273C40.9726 45.3805 41.1708 36.0584 44.4301 34.6015L52.3234 31.0788C51.8863 32.5551 51.6907 34.3431 51.7635 36.4081C51.9253 41.0074 53.3576 46.5485 55.797 52.0118C59.5399 60.3946 64.5695 66.4635 69.0552 68.5742L61.1737 72.0919ZM73.3851 66.6405C70.1233 68.094 63.049 62.0226 58.1169 50.9759C55.808 45.8041 54.4536 40.5983 54.3028 36.3183C54.1682 32.4874 55.0228 29.8744 56.6473 29.1485C56.9684 29.0053 57.3258 28.935 57.7154 28.935C61.2822 28.935 67.4705 34.8539 71.9173 44.8147C74.2262 49.9858 75.5806 55.1906 75.7313 59.4706C75.8643 63.3015 75.0097 65.9147 73.3851 66.6405Z" />
+        </symbol>
+    
+        <symbol id="percent-icon" viewBox="0 0 85 86" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M54.4853 32.8851L28.8153 53.2851C28.3053 53.7101 28.1353 54.5601 28.6453 55.0701C28.9003 55.4101 29.2403 55.5801 29.6653 55.5801C29.9203 55.5801 30.2603 55.4951 30.4303 55.3251L56.1003 34.9251C56.6103 34.5001 56.7803 33.6501 56.2703 33.1401C55.8453 32.5451 55.0803 32.4601 54.4853 32.8851Z" />
+            <path
+                d="M35.7002 41.98C36.0402 41.98 36.3802 41.98 36.7202 41.895C40.2052 41.385 42.6702 38.07 42.0752 34.5C41.8202 32.8 40.8852 31.27 39.5252 30.25C38.1652 29.23 36.4652 28.805 34.7652 29.06C33.0652 29.315 31.5352 30.25 30.5152 31.61C29.4952 32.97 29.0702 34.67 29.3252 36.37C29.8352 39.685 32.6402 41.98 35.7002 41.98ZM35.1052 31.695C35.2752 31.695 35.5302 31.61 35.7002 31.61C37.5702 31.61 39.2702 32.97 39.5252 34.925C39.8652 37.05 38.4202 39.005 36.2952 39.345C34.1702 39.685 32.2152 38.24 31.8752 36.115C31.5352 33.99 33.0652 32.035 35.1052 31.695Z" />
+            <path
+                d="M49.3003 46.2301C45.7303 46.2301 42.8403 49.1201 42.8403 52.6901C42.8403 56.2601 45.7303 59.1501 49.3003 59.1501C52.8703 59.1501 55.7603 56.2601 55.7603 52.6901C55.6753 49.1201 52.7853 46.2301 49.3003 46.2301ZM49.3003 56.5151C47.1753 56.5151 45.3903 54.7301 45.3903 52.6051C45.3903 50.4801 47.1753 48.6951 49.3003 48.6951C51.4253 48.6951 53.2103 50.4801 53.2103 52.6051C53.1253 54.8151 51.4253 56.5151 49.3003 56.5151Z" />
+            <path
+                d="M81.0903 43.2551C81.0903 43.1701 81.1753 43.0001 81.1753 42.9151C81.1753 39.2601 77.3503 37.3901 74.0353 35.7751C71.6553 34.5851 69.1053 33.3101 68.4253 31.7801C67.7453 30.1651 68.6803 27.5301 69.6153 25.0651C70.8903 21.5801 72.1653 18.0101 69.7853 15.6301C67.4053 13.2501 64.0053 14.1001 60.6053 14.8651C58.2253 15.3751 55.7603 15.9701 54.1453 15.2901C52.5303 14.6101 51.1703 12.4851 49.8953 10.4451C48.0253 7.55505 45.9853 4.24005 42.4153 4.24005C38.8453 4.24005 36.8053 7.55505 35.0203 10.5301C33.7453 12.6551 32.4703 14.7801 30.8553 15.4601C29.2403 16.1401 26.6903 15.5451 24.3103 14.9501C20.9103 14.1001 17.4253 13.2501 15.1303 15.5451C12.7503 17.9251 13.9403 21.4951 15.0453 24.9801C15.8953 27.5301 16.6603 30.0801 15.9803 31.7801C15.3003 33.3951 12.9203 34.5851 10.6253 35.7751C7.39523 37.4751 3.74023 39.3451 3.74023 42.9151C3.74023 43.0001 3.74023 43.1701 3.82523 43.2551C3.82523 43.3401 3.74023 43.5101 3.74023 43.5951C3.74023 47.1651 7.39523 49.1201 10.6253 50.7351C12.9203 51.9251 15.3003 53.1151 15.9803 54.7301C16.6603 56.3451 15.8103 58.9801 15.0453 61.5301C13.9403 65.0151 12.7503 68.5851 15.1303 70.9651C17.5103 73.3451 20.9953 72.4101 24.3103 71.5601C26.6903 70.9651 29.2403 70.3701 30.8553 71.0501C32.4703 71.7301 33.7453 73.8551 35.0203 75.9801C36.8053 78.9551 38.8453 82.2701 42.4153 82.2701C45.9853 82.2701 48.1103 78.9551 49.8953 76.0651C51.1703 74.0251 52.5303 71.9001 54.1453 71.2201C55.8453 70.5401 58.2253 71.0501 60.6053 71.6451C63.9203 72.4101 67.4053 73.2601 69.7853 70.8801C72.1653 68.5001 70.8903 64.9301 69.6153 61.4451C68.6803 58.8951 67.7453 56.3451 68.4253 54.7301C69.1053 53.1151 71.5703 51.9251 74.0353 50.7351C77.3503 49.0351 81.1753 47.1651 81.1753 43.5951C81.1753 43.4251 81.0903 43.3401 81.0903 43.2551ZM72.8453 48.4401C70.0403 49.8851 67.0653 51.3301 66.0453 53.7951C64.9403 56.3451 66.1303 59.4051 67.1503 62.3801C68.1703 65.1851 69.1903 67.9051 67.9153 69.0951C66.5553 70.4551 63.9203 69.8601 61.1153 69.1801C58.3103 68.5001 55.5053 67.9051 53.0403 68.9251C50.6603 69.9451 49.1303 72.3251 47.6853 74.7051C46.0703 77.2551 44.5403 79.7201 42.3303 79.7201C40.2053 79.7201 38.6753 77.2551 37.0603 74.6201C35.6153 72.1551 34.0853 69.6901 31.7053 68.6701C29.2403 67.6501 26.3503 68.3301 23.5453 69.0951C20.7403 69.7751 18.1053 70.4551 16.7453 69.1801C15.4703 67.9051 16.3203 65.1851 17.2553 62.3801C18.1903 59.4051 19.2103 56.3451 18.1053 53.8801C17.0853 51.4151 14.2803 49.9701 11.5603 48.6101C8.75523 47.1651 6.12023 45.8051 6.12023 43.6801C6.12023 43.5951 6.12023 43.4251 6.03523 43.3401C6.03523 43.2551 6.12023 43.0851 6.12023 43.0001C6.12023 40.9601 8.75523 39.6001 11.5603 38.0701C14.2803 36.7101 17.0853 35.2651 18.1053 32.8001C19.1253 30.2501 18.1903 27.1901 17.2553 24.3001C16.3203 21.4101 15.4703 18.6901 16.7453 17.5001C18.1053 16.1401 20.7403 16.8201 23.5453 17.5851C26.3503 18.2651 29.2403 19.0301 31.7053 18.0101C34.0853 16.9901 35.6153 14.5251 37.0603 12.0601C38.6753 9.42505 40.1203 6.96005 42.3303 6.96005C44.5403 6.96005 46.0703 9.42505 47.6853 11.9751C49.2153 14.3551 50.7453 16.7351 53.0403 17.7551C55.5053 18.7751 58.3103 18.0951 61.1153 17.5001C63.9203 16.8201 66.5553 16.2251 67.9153 17.5851C69.1903 18.7751 68.1703 21.4951 67.1503 24.3001C66.0453 27.2751 64.9403 30.3351 66.0453 32.8851C67.0653 35.3501 70.0403 36.7951 72.8453 38.2401C75.8203 39.6851 78.5403 41.1301 78.5403 43.1701C78.5403 43.2551 78.5403 43.4251 78.6253 43.5101C78.6253 43.5951 78.5403 43.7651 78.5403 43.8501C78.6253 45.5501 75.8203 46.9951 72.8453 48.4401Z" />
+        </symbol>
+    
+        <symbol id="check-icon_big" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="m33.427.67-.901.538.987.033c.543.018 1.429.018 1.968 0l.982-.033-.938-.547c-.515-.3-.995-.542-1.067-.537-.072.005-.536.251-1.031.546M48.28 22.396c-.161.174-4.164 5.284-8.895 11.357a4573.635 4573.635 0 0 1-8.862 11.354l-.261.315-4.217-5.403c-2.319-2.972-4.242-5.404-4.272-5.404-.031 0-.365.238-.744.53-.431.332-.666.59-.628.69.068.175 9.268 12.018 9.661 12.434l.241.257L40.078 36c10.606-13.592 10.193-13.004 9.59-13.646-.371-.395-1.001-.376-1.388.042"
+                fill-rule="evenodd" fill="#000" />
+        </symbol>
+    
+        <symbol id="filter-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M12,25l6.67,6.67a1,1,0,0,0,.7.29.91.91,0,0,0,.39-.08,1,1,0,0,0,.61-.92V13.08L31.71,1.71A1,1,0,0,0,31.92.62,1,1,0,0,0,31,0H1A1,1,0,0,0,.08.62,1,1,0,0,0,.29,1.71L11.67,13.08V24.33A1,1,0,0,0,12,25ZM3.41,2H28.59l-10,10a1,1,0,0,0-.3.71V28.59l-4.66-4.67V12.67a1,1,0,0,0-.3-.71Z" />
+        </symbol>
+    
+    </svg>
+    <div class="page">
+
+        <header class="header">
+        
+          <div class="container">
+        
+            <div class="header__container">
+              <a href="#" class="header__logo">
+                <img src="./assets/images/logo.png" alt="">
+              </a>
+        
+              <nav class="swiper header-nav">
+                <div class="swiper-wrapper header-nav__list">
+                  <a href="#" class="swiper-slide header-nav__link">Главная</a>
+                  <a href="#" class="swiper-slide header-nav__link header-nav__link_orange">доходные апартамерты</a>
+                  <a href="#" class="swiper-slide header-nav__link">доступные инвестиции</a>
+                  <a href="#" class="swiper-slide header-nav__link">все объекты</a>
+                  <a href="#" class="swiper-slide header-nav__link">команда</a>
+                  <a href="#" class="swiper-slide header-nav__link">контакты</a>
+                  <a href="#" class="swiper-slide header-nav__link">клуб</a>
+                </div>
+              </nav>
+        
+            </div>
+        
+          </div>
+        
+        </header>
+        <section class="objects">
+          <div class="container">
+        
+            <div class="page-nav">
+              <a href="#" class="page-nav__link">Главная</a>
+              <a href="#" class="page-nav__link">Все объекты</a>
+            </div>
+        
+            <h1 class="block-title objects__title">Все объекты макромир инвест</h1>
+        
+            <h4 class="objects__subtitle">
+              Посмотрите все объекты, которые вы можете приобрести, и которые мы уже реализовали
+            </h4>
+        
+            <div class="objects-filter">
+              <h6 class="objects-filter__title">
+                <svg>
+                  <use href="#filter-icon"></use>
+                </svg>
+                Фильтр
+              </h6>
+        
+              <div class="swiper objects-filter__swiper">
+                <div class="swiper-wrapper">
+                  <button type="button" class="swiper-slide objects-filter__btn _active">
+                    Все
+                  </button>
+                  <button type="button" class="swiper-slide objects-filter__btn">
+                    Инвест проект
+                  </button>
+                  <button type="button" class="swiper-slide objects-filter__btn">
+                    Продажа апартаментов
+                  </button>
+                  <button type="button" class="swiper-slide objects-filter__btn">
+                    Закрытый проект
+                  </button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="objects-list">
+              <div class="objects-item">
+                <div class="objects-item__img">
+                  <img src="./assets/images/apartments-catalog-1.jpg" alt="">
+        
+                  <span class="objects-item__label">Продажа апартаментов</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-1.jpg" alt="">
+        
+                  <span class="objects-item__label">Продажа апартаментов</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-2.jpg" alt="">
+        
+                  <span class="objects-item__label">Продажа апартаментов</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-3.jpg" alt="">
+        
+                  <span class="objects-item__label">Продажа апартаментов</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item objects-item_inv">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-1.jpg" alt="">
+        
+                  <span class="objects-item__label">Инвест проект</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item objects-item_close">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-2.jpg" alt="">
+        
+                  <span class="objects-item__label">Закрытый проект</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item objects-item_close">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-3.jpg" alt="">
+        
+                  <span class="objects-item__label">Закрытый проект</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item objects-item_close">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-1.jpg" alt="">
+        
+                  <span class="objects-item__label">Закрытый проект</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+              <div class="objects-item objects-item_close">
+                <div class="objects-item__img">
+                  <img src="./assets/images/objects-2.jpg" alt="">
+        
+                  <span class="objects-item__label">Закрытый проект</span>
+                </div>
+        
+                <div class="objects-item__inner">
+                  <h4 class="objects-item__title">Санкт-петербург, садовая, 101</h4>
+        
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Доходность:</h6>
+                    <p class="objects-item__info-text">15 %-17 %</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Количество апартаментов:</h6>
+                    <p class="objects-item__info-text">20.05.2021</p>
+                  </div>
+                  <div class="objects-item__info">
+                    <h6 class="objects-item__info-title">Срок окупаемости:</h6>
+                    <p class="objects-item__info-text">7-8 лет</p>
+                  </div>
+                </div>
+        
+                <a href="#" class="default-btn default-btn_orange objects-item__link">
+                  запросить
+                  цену
+                </a>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="feedback">
+            <div class="container feedback__container">
+        
+              <form action="#" class="feedback-form">
+                <h3 class="block-title feedback__title">Заполните форму</h3>
+        
+                <p class="feedback__subtitle">
+                  И получите сравнительный анализ доходности апартаментов в Москве и Санкт-Петербурге
+                </p>
+        
+                <div class="feedback__inner">
+                  <label class="apartments-fedback__input">
+                    Имя
+                    <input type="text">
+                  </label>
+                  <label class="apartments-fedback__input">
+                    Телефон
+                    <input type="text">
+                  </label>
+        
+                  <button type="submit" class="default-btn default-btn_orange apartments-fedback__btn">
+                    записаться
+                  </button>
+                </div>
+              </form>
+        
+            </div>
+          </div>
+        
+        </section>
+        <footer class="footer">
+          <div class="container footer__container">
+        
+            <a href="#" class="footer__logo">
+              <img src="./assets/images/logo.png" alt="">
+            </a>
+        
+            <div class="footer-nav">
+              <div class="footer-nav__list">
+                <a href="#" class="footer-nav__link">апартаменты</a>
+                <a href="#" class="footer-nav__link">инвестиции</a>
+                <a href="#" class="footer-nav__link">каталог объектов</a>
+                <a href="#" class="footer-nav__link">команда</a>
+                <a href="#" class="footer-nav__link">контакты</a>
+                <a href="#" class="footer-nav__link">клуб</a>
+              </div>
+        
+              <div class="footer-nav__list">
+                <a href="#" class="footer-nav__link">контакты</a>
+                <a href="#" class="footer-nav__link footer-nav__link_small">Invest@mmir.pro</a>
+                <a href="#" class="footer-nav__link footer-nav__link_small">СПб, Литейный пр. 26 <br> Москва, Пр. Мира 40</a>
+              </div>
+        
+              <div class="footer-nav__list">
+                <p class="footer-nav__link">по вопросам сотрудничества</p>
+                <a href="#" class="footer-nav__link footer-nav__link_small">+7 (812) 313-27-40</a>
+                <a href="#" class="footer-nav__link footer-nav__link_small">+7 (958) 578-24-25</a>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="footer-legal">
+            <div class="container footer-legal__container">
+              <p class="footer-legal__text">2010-2019 Макромир</p>
+        
+              <a href="#" class="footer-legal__text">Политика конфиденциальности</a>
+        
+              <a href="#" class="footer-legal__text">Цены и тарифы</a>
+            </div>
+          </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
